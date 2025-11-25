@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Setup Guide
 
-## Getting Started
-
-First, run the development server:
+## Quick Start
 
 ```bash
+# Clone the repository
+git clone <repository-url>
+
+# Navigate to project directory
+cd nextjs-user-manager-assessment
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Available Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Start development server
+npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Build for production
+npm run build
 
-## Learn More
+# Start production server
+npm run start
 
-To learn more about Next.js, take a look at the following resources:
+# Run linter
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Core Framework
 
-## Deploy on Vercel
+- **Next.js 16** - React framework with App Router
+- **React 19** - UI library
+- **TypeScript** - Type-safe JavaScript
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Styling
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **shadcn/ui** - Re-usable component library
+- **Radix UI** - Unstyled, accessible components
+- **Lucide React** - Icon library
+
+### Form Management
+
+- **Formik** - Form state management
+- **Yup** - Schema validation
+
+### Other Libraries
+
+- **sonner** - Toast notifications
+- **next-themes** - Dark mode support
+- **class-variance-authority** - Component variants
+- **clsx** & **tailwind-merge** - Conditional styling
+
+## Project Structure
+
+```
+nextjs-user-manager-assessment/
+├── app/
+│   ├── users/
+│   │   ├── actions/          # Server actions
+│   │   ├── components/       # User-specific components
+│   │   └── types/           # TypeScript types
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   └── ui/                  # shadcn/ui components
+├── data/
+│   └── users.json          # User data (local only)
+├── lib/
+│   └── utils.ts            # Utility functions
+└── provider/               # Context providers
+```
+
+## Development Notes
+
+- Uses App Router (Next.js 13+)
+- Server Components by default
+- Client Components marked with `"use client"`
+- Server Actions marked with `"use server"`
+
+## Important
+
+⚠️ **File-based storage (`data/users.json`) only works locally**
+For production deployment on Vercel, you need to use a database (Postgres, MongoDB, etc.)
