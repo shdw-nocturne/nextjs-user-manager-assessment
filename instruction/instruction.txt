@@ -1,0 +1,16 @@
+Please review the Users.json provided.
+Please create a new Next.JS Project.
+
+Create Users Page: 
+Create a new page routed to '/users' and display the users listed in Users.json as cards with the following information displayed: 
+* name
+* company name
+* email
+
+Create User Feature: 
+Add a "Create User" button to the /users page.
+When this button is clicked, it should display a Modal with a Create User form. 
+When the form is submitted - a new item should be added to the Users.json - all fields should be populated, please refer to the JSON for all properties.
+The goal is for the new user to be displayed on the list of users on the /users page.
+
+Once completed, push your changes to a new GitHub repository and provide us with the link for review.
