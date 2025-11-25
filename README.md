@@ -59,34 +59,9 @@ npm run lint
 - **class-variance-authority** - Component variants
 - **clsx** & **tailwind-merge** - Conditional styling
 
-## Project Structure
-
-```
-nextjs-user-manager-assessment/
-├── app/
-│   ├── users/
-│   │   ├── actions/          # Server actions
-│   │   ├── components/       # User-specific components
-│   │   └── types/           # TypeScript types
-│   ├── layout.tsx
-│   └── page.tsx
-├── components/
-│   └── ui/                  # shadcn/ui components
-├── data/
-│   └── users.json          # User data (local only)
-├── lib/
-│   └── utils.ts            # Utility functions
-└── provider/               # Context providers
-```
-
 ## Development Notes
 
 - Uses App Router (Next.js 13+)
 - Server Components by default
 - Client Components marked with `"use client"`
 - Server Actions marked with `"use server"`
-
-## Important
-
-⚠️ **File-based storage (`data/users.json`) only works locally**
-For production deployment on Vercel, you need to use a database (Postgres, MongoDB, etc.)
