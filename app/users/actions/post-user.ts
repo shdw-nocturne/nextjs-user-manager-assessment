@@ -3,7 +3,6 @@
 import fs from "fs/promises";
 import { revalidatePath } from "next/cache";
 import path from "path";
-
 import { UserTypes } from "../types/user.types";
 
 export default async function postUser(
@@ -13,6 +12,7 @@ export default async function postUser(
 		const filePath = path.join(process.cwd(), "data", "Users.json");
 
 		const fileData = await fs.readFile(filePath, "utf-8");
+
 		const users: UserTypes[] = JSON.parse(fileData);
 
 		const newUser: UserTypes = {

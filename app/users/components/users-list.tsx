@@ -31,6 +31,7 @@ const UsersList = async () => {
 			</Empty>
 		);
 	}
+
 	return (
 		<section className="w-full space-y-4">
 			<ScrollArea className="w-full  h-screen max-h-[600px] rounded-md border p-4">
