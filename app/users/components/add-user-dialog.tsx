@@ -17,7 +17,7 @@ const AddUserDialog = () => {
 				<Dialog>
 					<DialogTrigger asChild>
 						<Button variant="outline">
-							<UserPlus /> Create User
+							<UserPlus /> Create User Form
 						</Button>
 					</DialogTrigger>
 					<DialogContent>
