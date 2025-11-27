@@ -9,7 +9,7 @@ export default async function postUser(
 	userData: Omit<UserTypes, "id">
 ): Promise<{ success: boolean; error?: string; data?: UserTypes }> {
 	try {
-		const filePath = path.join(process.cwd(), "data", "Users.json");
+		const filePath = path.join(process.cwd(), "data", "users.json");
 
 		const fileData = await fs.readFile(filePath, "utf-8");
 
