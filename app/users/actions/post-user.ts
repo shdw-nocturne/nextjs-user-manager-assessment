@@ -7,7 +7,12 @@ import { UserTypes } from "../types/user.types";
 
 export default async function postUser(
 	userData: Omit<UserTypes, "id">
-): Promise<{ success: boolean; error?: string; data?: UserTypes }> {
+): Promise<{
+	success: boolean;
+	error?: string;
+	data?: UserTypes;
+	message: unknown;
+}> {
 	try {
 		const filePath = path.join(process.cwd(), "data", "users.json");
 
@@ -26,9 +31,17 @@ export default async function postUser(
 		//Refetch the users list after adding a new user
 		revalidatePath("/users");
 
-		return { success: true, data: newUser };
+		return {
+			success: true,
+			data: newUser,
+			message: "User created successfully",
+		};
 	} catch (error) {
 		console.error("Error creating user:", error);
-		return { success: false, error: "Failed to create user" };
+		return {
+			success: false,
+			error: "Failed to create user",
+			message: (error as Error).message,
+		};
 	}
 }

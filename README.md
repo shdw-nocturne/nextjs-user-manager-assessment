@@ -1,5 +1,9 @@
 # Setup Guide
 
+## Live Demo
+
+**Deployed on VPS:** http://72.60.108.131:3005
+
 ## Quick Start
 
 ```bash
