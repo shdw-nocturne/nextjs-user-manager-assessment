@@ -13,18 +13,18 @@ const AddUserDialog = () => {
 	return (
 		<section className="w-full">
 			<div className="flex justify-between items-center">
-				<h1 className=" text-xl font-semibold">Users List</h1>
+				<h1 className=" text-lg font-semibold">Users List</h1>
 				<Dialog>
 					<DialogTrigger asChild>
 						<Button variant="outline">
-							<UserPlus /> Create User Form
+							<UserPlus /> Create User
 						</Button>
 					</DialogTrigger>
 					<DialogContent>
 						<DialogHeader>
 							<DialogTitle className="flex items-center gap-2">
 								<UserPlus />
-								Create User
+								Create User Form
 							</DialogTitle>
 							<CreateUserForm />
 						</DialogHeader>
